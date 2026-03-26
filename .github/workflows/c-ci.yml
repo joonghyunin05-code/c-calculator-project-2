@@ -1,0 +1,45 @@
+
+name: C Calculator CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/**
+      - fix/**
+      - docs/**
+      - ci/**
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout source
+        uses: actions/checkout@v4
+
+      - name: 2. Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential
+
+      - name: 3. Build project
+        run: make
+
+      - name: 4. Run addition test
+        run: ./calculator + 10 20
+
+      - name: 5. Run subtraction test
+        run: ./calculator - 20 5
+
+      - name: 6. Run multiplication test
+        run: ./calculator '*' 3 4
+
+      - name: 7. Run division test
+        run: ./calculator / 20 4
+
