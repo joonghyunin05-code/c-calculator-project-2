@@ -1,4 +1,5 @@
 int mul(int a, int b) {
-    return a * b;
+    int mult = a * b;
+    return mult;
 }
 
