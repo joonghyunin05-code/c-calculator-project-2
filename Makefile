@@ -23,4 +23,4 @@ test: $(TEST_TARGET)
 	./$(TEST_TARGET)
 
 clean:
-	rm -f src/*.o $(TARGET) $(TEST_TARGET)
+	rm -f src/*.o $(TARGET)
