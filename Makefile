@@ -5,8 +5,6 @@ TARGET = calculator
 SRCS = src/main.c src/add.c src/sub.c src/mul.c src/div.c
 OBJS = $(SRCS:.c=.o)
 
-TEST_SRCS = tests/test_calc.c src/add.c src/sub.c src/mul.c src/div.c
-
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
