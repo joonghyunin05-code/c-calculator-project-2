@@ -38,7 +38,7 @@ jobs:
         run: ./calculator - 20 5
 
       - name: 6. Run multiplication test
-        run: ./calculator '*' 3 4
+        run: ./calculator x 3 4
 
       - name: 7. Run division test
         run: ./calculator / 20 4
